@@ -1,9 +1,9 @@
-from PyQt5.QtWidgets import (
+from PyQt6.QtWidgets import (
     QApplication, QVBoxLayout, QHBoxLayout, QPushButton, 
     QCheckBox, QLabel, QWidget, QFileDialog, QStatusBar
 )
-from PyQt5.QtCore import Qt
-from PyQt5.QtGui import QIcon
+from PyQt6.QtCore import Qt
+from PyQt6.QtGui import QIcon
 import sys
 
 class MainWindow(QWidget):
@@ -42,7 +42,7 @@ class MainWindow(QWidget):
         # Title
         title = QLabel("Шифрование файлов")
         title.setStyleSheet("font-size: 18px; font-weight: bold; color: #333;")
-        title.setAlignment(Qt.AlignCenter)
+        title.setAlignment(Qt.AlignmentFlag.AlignCenter)
         main_layout.addWidget(title)
 
         # Buttons layout
@@ -52,7 +52,7 @@ class MainWindow(QWidget):
         self.encrypt_button = QPushButton("🔒 Зашифровать")
         self.encrypt_folder_button = QPushButton("📁 Зашифровать папку")
         self.decrypt_button = QPushButton("🔓 Дешифровать")
-        
+
         button_layout.addWidget(self.encrypt_button)
         button_layout.addWidget(self.encrypt_folder_button)
         button_layout.addWidget(self.decrypt_button)
